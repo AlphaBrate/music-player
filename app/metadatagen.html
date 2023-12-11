@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metadata Audio File Generator</title>
+    <link rel="stylesheet" href="metadata.css">
+</head>
+<body>
+    <div id="contextMenu">
+        <div class="item" onclick="location.reload()"><img class="icon" src="../assets/icons/svg/contextMenu/Reload.svg">Reload</div>
+    </div>
+    <div class="backdrop"></div>
+    <div class="posRel">
+        <span id="searcher">
+            <label for="search">Search via <a href="https://itunes.apple.com/">iTunes</a>: </label>
+            <input type="text" name="search" id="search" placeholder="Song keywords">
+            <button onclick="search()">Search</button>
+            <button onclick="edit()">Customize</button>
+        </span>
+        <div id="results">
+            <button onclick="rs()">Re-search</button>
+        </div>
+        <div id="form">
+            <form id="pps">
+                <div><label for="t">Title: </label><input type="text" name="Title" id="t" placeholder="Title"></div>
+                <div><label for="a">Artist: </label><input type="text" name="Artist" id="a" placeholder="Artist"></div>
+                <div><label for="al">Album: </label><input type="text" name="Album" id="al" placeholder="Album"></div>
+                <div><label for="y">Year: </label><input type="text" name="Year" id="y" placeholder="Year"></div>
+                <span>
+                    <img src="../assets/icons/svg/placeholder.svg" alt="Artwork" id="artwork">
+                    <label for="art" class="btn">Upload artwork</label>
+                    <input type="file" name="art" id="art" accept="image/*">
+                </span>
+                <span>
+                    <label for="mus" class="btn" id="uplmp3">Upload .mp3 file</label>
+                    <input type="file" name="mus" id="mus" accept=".mp3">
+                    <audio id="audioPreview" controls></audio>
+                </span>
+                <input type="button" value="Download .mp3 with Tags" onclick="download()">
+                <input type="button" value="Return" onclick="rs('results')">
+            </form>
+        </div>
+    </div>
+    <!-- <script src="mouse.js"></script> -->
+    <script src="metadata.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+#album, #year {
+    display: none;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#albumArt {
+    position: absolute;
+    box-shadow: 0px 7px 40px 20px rgba(255, 255, 255, 0.1);
+}
+
+.down {
+    display: none;
+}
+
+.up * {
+    text-shadow: 0px 1px 13px #000000;
+}
+
+.s {
+    width: max-content;
+    position: relative;
+    height: 80vh;
+    max-height: 500px;
+}

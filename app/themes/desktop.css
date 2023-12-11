@@ -1,0 +1,78 @@
+.player {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(13px);
+    height: max-content;
+    border-radius: 15px;
+    position: absolute;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.85);
+}
+
+.back {
+    backdrop-filter: blur(5px);
+}
+
+#albumArt {
+    max-width: 500px;
+    max-height: 500px;
+    height: 25vh;
+    width: 25vh;
+}
+
+.s {
+    width: 50%;
+    position: relative;
+    height: 20vh;
+    max-height: 500px;
+}
+
+.s>* {
+    color: black !important;
+    transform: scale(.65);
+}
+
+.s>*>* {
+    color: black !important;
+}
+
+.up {
+    height: 60%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    margin-right: 15px;
+    width: 50%;
+    height: 5px;
+    background: #000000;
+}
+
+/* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: none;
+    background-color: #000000;
+    height: 15px;
+    width: 15px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(0);
+    border-radius: 50%;
+}
+
+#time {
+    position: absolute;
+    bottom: unset;
+    right: unset;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 15px;
+    font-size: 76px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
