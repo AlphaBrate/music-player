@@ -1,0 +1,76 @@
+<!-- This Open-sourced player by AlphaBrate is under the MIT license. -->
+<!-- As this project is done by individual from AlphaBrate, the terms, naming may not be professional. -->
+<!-- © AlphaBrate 2022 -->
+<!-- File: player.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <link rel="stylesheet" href="player.css">
+    <script src="theme.js"></script>
+</head>
+<body style="background-image: url(../assets/icons/svg/placeholder.svg);">
+    <div id="contextMenu">
+        <div class="item" onclick="location.href='https://github.com/alphabrate/music-player'">Powered by AlphaBrate</div>
+        <div class="line"></div>
+        <div class="item" onclick="normal()"><img class="icon" src="../assets/icons/svg/contextMenu/Normal.svg">Normal</div>
+        <div class="item" onclick="immerse()"><img class="icon" src="../assets/icons/svg/contextMenu/Immerse.svg">Immerse</div>
+        <div class="item" onclick="desktop()"><img class="icon" src="../assets/icons/svg/contextMenu/Desktop.svg">Desktop</div>
+        <div class="line"></div>
+        <div class="item" onclick="location.reload()"><img class="icon" src="../assets/icons/svg/contextMenu/Reload.svg">Reload</div>
+        <div class="item" onclick="audio.currentTime=0"><img class="icon" src="../assets/icons/svg/contextMenu/Begin.svg">To Beginning</div>
+    </div>
+    <script src="mouse.js"></script>
+    <div class="back"></div>
+    <span id="time">--:--</span>
+    <audio src="" id="audio"></audio>
+    <div class="player">
+        <img src="../assets/icons/svg/placeholder.svg" alt="" id="albumArt">
+        <div class="s">
+            <div class="up">
+                <div id="title">--</div>
+                <div class="queue" id="list"></div>
+                <div id="artist">--</div>
+                <div id="album">--</div>
+                <div id="year">----</div>
+            </div>
+            <div class="down">
+                <div class="mainbuttons">
+                    <button id="prev" class="mbtn">
+                        <img src="../assets/icons/svg/prev.svg">
+                        </button>
+                    <button id="toggle" class="mbtn" data-playing="false">
+                        <img id="toggleIcon" src="../assets/icons/svg/play.svg">
+                        </button>
+                    <button id="next" class="mbtn">
+                        <img src="../assets/icons/svg/next.svg">
+                        </button>
+                </div>
+                <input type="range" name="timecursor" id="tc" value="0" min="0" max="100">
+            </div>
+        </div>
+    </div>
+    <script src="player.js"></script>
+    <script src="controls.js"></script>
+    <script src="theme.js"></script>
+    <script>
+        // Double click to skip to next song
+        // Triple click to skip to previous song
+        var clicks = 0;
+        var timer, timeout = 200;
+        document.getElementById('albumArt').addEventListener('click', function(e) {
+        clearTimeout(timer);
+        clicks++;
+        var evt = e;
+        timer = setTimeout(function() {
+            if(clicks==1) toggleSong();
+            if(clicks==2) nextSong();
+            if(clicks==3) previousSong();
+            clicks = 0;
+        }, timeout)});
+    </script>
+</body>
+</html>
