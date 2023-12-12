@@ -18,6 +18,7 @@ This app can play & get the metadata of audio files. Drag the files to the home 
 > `$> node index.js` can also start the app.
 
 One song is preset in `assets/defaults/music` drag it to the player and play.
+
 3 Styles are preset.
 
 ## Make changes
