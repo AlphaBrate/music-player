@@ -1,0 +1,90 @@
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#albumArt {
+    height: 80vw;
+    width: 80vw;
+}
+
+.up {
+    height: auto;
+    position: relative;
+}
+
+#title {
+    font-size: 2.2rem;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+#artist {
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#album {
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0 0 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.down {
+    height: auto;
+    position: relative;
+}
+
+.mbtn {
+    height: 35px;
+    width: 35px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 20px;
+}
+
+.s {
+    width: 80%;
+    height: auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: rgb(255, 255, 255);
+    border: 3px solid rgba(0, 0, 0, 0.37);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(.1px);
+}
+
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+* {
+    font-family: 'Kaiti', serif !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}

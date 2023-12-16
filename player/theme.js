@@ -67,6 +67,16 @@ var normal = () => {
     toggleIcons = ['../assets/icons/svg/play.svg', '../assets/icons/svg/pause.svg'];
 }
 
+var mobile = () => {
+    // Add style sheet to document
+    normal();
+    removetheme();
+    theme('player.css');
+    theme('themes/mobileADDED.css');
+}
+
+if (innerWidth < innerHeight) mobile();
+
 // SET UP YOUR OWN THEME HERE.
 
 
