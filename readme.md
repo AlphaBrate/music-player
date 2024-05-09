@@ -1,3 +1,8 @@
+> [!IMPORTANT]  
+> THIS PROJECT HAS BEEN ARCHIVED.
+> 
+> If you are looking for a easy-to-use plugin or code template instead of a simple-built electron music player, visit [alphabrate/alb-msplayer](https://github.com/alphabrate/alb-msplayer)
+
 # Music Player
 
 > Built by AlphaBrate
